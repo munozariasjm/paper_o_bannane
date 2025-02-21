@@ -15,6 +15,7 @@ import numpy as np
 import argparse
 
 import warnings
+
 warnings.filterwarnings("ignore")
 
 # %%
@@ -43,9 +44,13 @@ def train_leave_out(n_out_list: List[int], config: Config, logs_dir: str = ""):
     """
     # Set data and model save paths to incorporate the left-out nuclei
     n_out_str = "_".join(map(str, n_out_list))
-    config.data_directory = "/work/submit/josemm/WORKS/Theory/BANANNE/bannane/DATA/all_o"
+    config.data_directory = (
+        "/work/submit/josemm/WORKS/Theory/BANANNE/bannane/DATA/all_o"
+    )
     config.model_save_path = os.path.join(logs_dir, f"model_leaveout_{n_out_str}.pth")
-    config.temperature_save_path = os.path.join(logs_dir, f"temperature_leaveout_{n_out_str}.pth")
+    config.temperature_save_path = os.path.join(
+        logs_dir, f"temperature_leaveout_{n_out_str}.pth"
+    )
     config.scaler_X_path = os.path.join(logs_dir, f"scaler_X_leaveout_{n_out_str}.pth")
     config.scaler_y_path = os.path.join(logs_dir, f"scaler_y_leaveout_{n_out_str}.pth")
 
@@ -86,13 +91,19 @@ def train_leave_out(n_out_list: List[int], config: Config, logs_dir: str = ""):
     histories = trainer.train(train_datasets, fidelity_levels, val_datasets)
 
     # 8) Load best model and set to evaluation mode
-    best_model = HierarchicalBNN.load(config.model_save_path, config, fidelity_levels).to(config.device)
+    best_model = HierarchicalBNN.load(
+        config.model_save_path, config, fidelity_levels
+    ).to(config.device)
     best_model.eval()
     trainer.model = best_model
 
     # 9) Plot the training history (loss and MAPE)
-    plot_training_losses_history(histories, os.path.join(logs_dir, f"training_history_leaveout_{n_out_str}.png"))
-    plot_mape_history(histories, os.path.join(logs_dir, f"training_mapes_leaveout_{n_out_str}.png"))
+    plot_training_losses_history(
+        histories, os.path.join(logs_dir, f"training_history_leaveout_{n_out_str}.png")
+    )
+    plot_mape_history(
+        histories, os.path.join(logs_dir, f"training_mapes_leaveout_{n_out_str}.png")
+    )
 
     ###############################
     # Predictions on the validation set (from available_data)
@@ -165,9 +176,17 @@ def train_leave_out(n_out_list: List[int], config: Config, logs_dir: str = ""):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n_out_list", type=str, default=None, help="Comma-separated list of nuclei to leave out")
-    parser.add_argument("--logs_dir", type=str,
-                        default="/work/submit/josemm/WORKS/Theory/BANANNE/LABS/LEAVEOUT")
+    parser.add_argument(
+        "--n_out_list",
+        type=str,
+        default=None,
+        help="Comma-separated list of nuclei to leave out",
+    )
+    parser.add_argument(
+        "--logs_dir",
+        type=str,
+        default="/work/submit/josemm/WORKS/Theory/BANANNE/LABS/LEAVEOUT",
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--n_embedding_dim", type=int, default=20)
     parser.add_argument("--embed_z", action="store_true")
@@ -178,7 +197,7 @@ if __name__ == "__main__":
     parser.add_argument("--dropout", type=float, default=0.05)
     parser.add_argument("--learning_rate", type=float, default=1e-4)
     parser.add_argument("--num_iterations", type=int, default=30_000)
-    parser.add_argument("--test_size", type=float, default=0.0001)
+    parser.add_argument("--test_size", type=float, default=0.2)
     parser.add_argument("--val_size", type=float, default=0.2)
     parser.add_argument("--perform_temperature_scaling", action="store_true")
 
@@ -211,7 +230,9 @@ if __name__ == "__main__":
         try:
             n_out_list = [int(x) for x in args.n_out_list.split(",")]
         except Exception as e:
-            raise ValueError("Please provide a valid comma-separated list of integers for --n_out_list") from e
+            raise ValueError(
+                "Please provide a valid comma-separated list of integers for --n_out_list"
+            ) from e
 
     # 4) Call the main training function
     train_leave_out(n_out_list, config, logs_dir=args.logs_dir)

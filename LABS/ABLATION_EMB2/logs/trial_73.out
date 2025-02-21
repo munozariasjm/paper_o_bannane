@@ -1,0 +1,804 @@
+Activated conda environment
+[DataLoader] Found 13 files matching the pattern.
+[DataLoader] Combined data shape: (17234, 35)
+[Preprocess] Data split => train: (11029, 35), val: (2758, 35), test: (3447, 35)
+[Preprocess] Processed fidelity 4 (index 0): 3758 samples.
+[Preprocess] Processed fidelity 6 (index 1): 3346 samples.
+[Preprocess] Processed fidelity 8 (index 2): 3194 samples.
+[Preprocess] Processed fidelity 10 (index 3): 731 samples.
+[Preprocess] Processed fidelity 4 (index 0): 949 samples.
+[Preprocess] Processed fidelity 6 (index 1): 833 samples.
+[Preprocess] Processed fidelity 8 (index 2): 801 samples.
+[Preprocess] Processed fidelity 10 (index 3): 175 samples.
+Fidelity levels: [4, 6, 8, 10]
+[Trainer] Starting BNN training...
+[Trainer] No improvement. Iteration 7500. Early stopping counter: 1, LR counter: 1
+[Trainer] No improvement. Iteration 9100. Early stopping counter: 1, LR counter: 1
+[Trainer] No improvement. Iteration 9300. Early stopping counter: 1, LR counter: 1
+[Trainer] No improvement. Iteration 9700. Early stopping counter: 1, LR counter: 1
+[Trainer] No improvement. Iteration 10600. Early stopping counter: 1, LR counter: 1
+[Trainer] No improvement. Iteration 10700. Early stopping counter: 2, LR counter: 2
+[Trainer] No improvement. Iteration 10800. Early stopping counter: 3, LR counter: 3
+[Trainer] No improvement. Iteration 10900. Early stopping counter: 4, LR counter: 4
+[Trainer] No improvement. Iteration 11000. Early stopping counter: 5, LR counter: 5
+[Trainer] No improvement. Iteration 11100. Early stopping counter: 6, LR counter: 6
+[Trainer] No improvement. Iteration 11200. Early stopping counter: 7, LR counter: 7
+[Trainer] No improvement. Iteration 11300. Early stopping counter: 8, LR counter: 8
+[Trainer] No improvement. Iteration 11400. Early stopping counter: 9, LR counter: 9
+[Trainer] No improvement. Iteration 11500. Early stopping counter: 10, LR counter: 10
+[Trainer] No improvement. Iteration 11600. Early stopping counter: 11, LR counter: 11
+[Trainer] No improvement. Iteration 11700. Early stopping counter: 12, LR counter: 12
+[Trainer] No improvement. Iteration 11800. Early stopping counter: 13, LR counter: 13
+[Trainer] No improvement. Iteration 11900. Early stopping counter: 14, LR counter: 14
+[Trainer] No improvement. Iteration 12000. Early stopping counter: 15, LR counter: 15
+[Trainer] No improvement. Iteration 12100. Early stopping counter: 16, LR counter: 16
+[Trainer] No improvement. Iteration 12200. Early stopping counter: 17, LR counter: 17
+[Trainer] No improvement. Iteration 12300. Early stopping counter: 18, LR counter: 18
+[Trainer] No improvement. Iteration 12400. Early stopping counter: 19, LR counter: 19
+[Trainer] No improvement. Iteration 12500. Early stopping counter: 20, LR counter: 20
+[Trainer] No improvement. Iteration 12600. Early stopping counter: 21, LR counter: 21
+[Trainer] No improvement. Iteration 12700. Early stopping counter: 22, LR counter: 22
+[Trainer] No improvement. Iteration 12800. Early stopping counter: 23, LR counter: 23
+[Trainer] No improvement. Iteration 12900. Early stopping counter: 24, LR counter: 24
+[Trainer] No improvement. Iteration 13000. Early stopping counter: 25, LR counter: 25
+[Trainer] Learning rate reduced to: 0.000010
+[Trainer] No improvement. Iteration 13100. Early stopping counter: 26, LR counter: 1
+[Trainer] No improvement. Iteration 13200. Early stopping counter: 27, LR counter: 2
+[Trainer] No improvement. Iteration 13300. Early stopping counter: 28, LR counter: 3
+[Trainer] No improvement. Iteration 13400. Early stopping counter: 29, LR counter: 4
+[Trainer] No improvement. Iteration 13500. Early stopping counter: 30, LR counter: 5
+[Trainer] No improvement. Iteration 13600. Early stopping counter: 31, LR counter: 6
+[Trainer] No improvement. Iteration 13700. Early stopping counter: 32, LR counter: 7
+[Trainer] No improvement. Iteration 13800. Early stopping counter: 33, LR counter: 8
+[Trainer] No improvement. Iteration 13900. Early stopping counter: 34, LR counter: 9
+[Trainer] No improvement. Iteration 14000. Early stopping counter: 35, LR counter: 10
+[Trainer] No improvement. Iteration 14100. Early stopping counter: 36, LR counter: 11
+[Trainer] No improvement. Iteration 14200. Early stopping counter: 37, LR counter: 12
+[Trainer] No improvement. Iteration 14300. Early stopping counter: 38, LR counter: 13
+[Trainer] No improvement. Iteration 14400. Early stopping counter: 39, LR counter: 14
+[Trainer] No improvement. Iteration 14500. Early stopping counter: 40, LR counter: 15
+[Trainer] No improvement. Iteration 14600. Early stopping counter: 41, LR counter: 16
+[Trainer] No improvement. Iteration 14700. Early stopping counter: 42, LR counter: 17
+[Trainer] No improvement. Iteration 14800. Early stopping counter: 43, LR counter: 18
+[Trainer] No improvement. Iteration 14900. Early stopping counter: 44, LR counter: 19
+[Trainer] No improvement. Iteration 15000. Early stopping counter: 45, LR counter: 20
+[Trainer] No improvement. Iteration 15100. Early stopping counter: 46, LR counter: 21
+[Trainer] No improvement. Iteration 15200. Early stopping counter: 47, LR counter: 22
+[Trainer] No improvement. Iteration 15300. Early stopping counter: 48, LR counter: 23
+[Trainer] No improvement. Iteration 15400. Early stopping counter: 49, LR counter: 24
+[Trainer] No improvement. Iteration 15500. Early stopping counter: 50, LR counter: 25
+[Trainer] Learning rate reduced to: 0.000001
+[Trainer] Early stopping triggered.
+[Trainer] Training completed.
+[Trainer] Calibrating temperatures on validation set...
+[Trainer] Temperature calibration finished. Calibrated temperatures: {4: 1.3431283235549927, 6: 1.1521580219268799, 8: 1.2055158615112305, 10: 1.6856703758239746}
+[Trainer] BNN training completed.
+**************************************************
+Z=8, N=4, emax=4
+RMSE Eb: 0.843
+RMSE Rch: 0.009
+MAPE Eb: 2.611
+MAPE Rch: 0.362
+--------------------------------------------------
+**************************************************
+Z=8, N=4, emax=10
+RMSE Eb: 1.384
+RMSE Rch: 0.055
+MAPE Eb: 2.223
+MAPE Rch: 2.588
+--------------------------------------------------
+**************************************************
+Z=8, N=4, emax=6
+RMSE Eb: 0.955
+RMSE Rch: 0.010
+MAPE Eb: 1.802
+MAPE Rch: 0.469
+--------------------------------------------------
+**************************************************
+Z=8, N=4, emax=8
+RMSE Eb: 1.116
+RMSE Rch: 0.019
+MAPE Eb: 1.813
+MAPE Rch: 0.825
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=8
+RMSE Eb: 1.036
+RMSE Rch: 0.014
+MAPE Eb: 1.309
+MAPE Rch: 0.631
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=6
+RMSE Eb: 1.072
+RMSE Rch: 0.009
+MAPE Eb: 1.502
+MAPE Rch: 0.456
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=4
+RMSE Eb: 0.799
+RMSE Rch: 0.007
+MAPE Eb: 1.652
+MAPE Rch: 0.319
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=10
+RMSE Eb: 1.119
+RMSE Rch: 0.016
+MAPE Eb: 1.567
+MAPE Rch: 0.761
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=4
+RMSE Eb: 0.958
+RMSE Rch: 0.008
+MAPE Eb: 1.390
+MAPE Rch: 0.380
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=6
+RMSE Eb: 1.150
+RMSE Rch: 0.008
+MAPE Eb: 1.307
+MAPE Rch: 0.367
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=8
+RMSE Eb: 1.298
+RMSE Rch: 0.012
+MAPE Eb: 1.301
+MAPE Rch: 0.585
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=10
+RMSE Eb: 1.469
+RMSE Rch: 0.019
+MAPE Eb: 1.337
+MAPE Rch: 0.907
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=8
+RMSE Eb: 1.400
+RMSE Rch: 0.013
+MAPE Eb: 1.182
+MAPE Rch: 0.650
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=10
+RMSE Eb: 1.508
+RMSE Rch: 0.016
+MAPE Eb: 1.126
+MAPE Rch: 0.833
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=6
+RMSE Eb: 1.441
+RMSE Rch: 0.015
+MAPE Eb: 1.343
+MAPE Rch: 0.708
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=4
+RMSE Eb: 0.938
+RMSE Rch: 0.011
+MAPE Eb: 1.147
+MAPE Rch: 0.548
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=4
+RMSE Eb: 0.898
+RMSE Rch: 0.010
+MAPE Eb: 0.977
+MAPE Rch: 0.257
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=8
+RMSE Eb: 1.013
+RMSE Rch: 0.010
+MAPE Eb: 0.750
+MAPE Rch: 0.303
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=6
+RMSE Eb: 0.912
+RMSE Rch: 0.010
+MAPE Eb: 0.744
+MAPE Rch: 0.304
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=10
+RMSE Eb: 1.586
+RMSE Rch: 0.020
+MAPE Eb: 0.938
+MAPE Rch: 0.523
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=8
+RMSE Eb: 0.988
+RMSE Rch: 0.011
+MAPE Eb: 0.715
+MAPE Rch: 0.326
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=6
+RMSE Eb: 0.714
+RMSE Rch: 0.007
+MAPE Eb: 0.567
+MAPE Rch: 0.208
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=4
+RMSE Eb: 0.980
+RMSE Rch: 0.008
+MAPE Eb: 1.051
+MAPE Rch: 0.215
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=10
+RMSE Eb: 1.279
+RMSE Rch: 0.014
+MAPE Eb: 0.929
+MAPE Rch: 0.406
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=4
+RMSE Eb: 0.842
+RMSE Rch: 0.007
+MAPE Eb: 0.911
+MAPE Rch: 0.197
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=10
+RMSE Eb: 1.190
+RMSE Rch: 0.010
+MAPE Eb: 0.901
+MAPE Rch: 0.314
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=6
+RMSE Eb: 0.848
+RMSE Rch: 0.008
+MAPE Eb: 0.727
+MAPE Rch: 0.243
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=8
+RMSE Eb: 0.880
+RMSE Rch: 0.009
+MAPE Eb: 0.605
+MAPE Rch: 0.263
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=4
+RMSE Eb: 0.755
+RMSE Rch: 0.007
+MAPE Eb: 0.836
+MAPE Rch: 0.175
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=6
+RMSE Eb: 0.728
+RMSE Rch: 0.008
+MAPE Eb: 0.594
+MAPE Rch: 0.236
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=8
+RMSE Eb: 0.852
+RMSE Rch: 0.009
+MAPE Eb: 0.563
+MAPE Rch: 0.273
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=10
+RMSE Eb: 0.985
+RMSE Rch: 0.009
+MAPE Eb: 0.696
+MAPE Rch: 0.302
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=6
+RMSE Eb: 0.882
+RMSE Rch: 0.007
+MAPE Eb: 0.673
+MAPE Rch: 0.187
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=4
+RMSE Eb: 0.778
+RMSE Rch: 0.006
+MAPE Eb: 0.782
+MAPE Rch: 0.147
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=8
+RMSE Eb: 0.767
+RMSE Rch: 0.008
+MAPE Eb: 0.529
+MAPE Rch: 0.229
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=10
+RMSE Eb: 1.096
+RMSE Rch: 0.008
+MAPE Eb: 0.757
+MAPE Rch: 0.217
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=8
+RMSE Eb: 0.933
+RMSE Rch: 0.007
+MAPE Eb: 0.615
+MAPE Rch: 0.209
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=4
+RMSE Eb: 0.926
+RMSE Rch: 0.007
+MAPE Eb: 1.011
+MAPE Rch: 0.178
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=10
+RMSE Eb: 1.080
+RMSE Rch: 0.008
+MAPE Eb: 0.752
+MAPE Rch: 0.245
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=6
+RMSE Eb: 0.790
+RMSE Rch: 0.006
+MAPE Eb: 0.595
+MAPE Rch: 0.165
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=8
+RMSE Eb: 1.257
+RMSE Rch: 0.014
+MAPE Eb: 0.799
+MAPE Rch: 0.378
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=4
+RMSE Eb: 0.898
+RMSE Rch: 0.009
+MAPE Eb: 0.934
+MAPE Rch: 0.241
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=6
+RMSE Eb: 0.874
+RMSE Rch: 0.007
+MAPE Eb: 0.638
+MAPE Rch: 0.193
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=10
+RMSE Eb: 0.749
+RMSE Rch: 0.012
+MAPE Eb: 0.432
+MAPE Rch: 0.338
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=8
+RMSE Eb: 1.102
+RMSE Rch: 0.010
+MAPE Eb: 0.661
+MAPE Rch: 0.288
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=4
+RMSE Eb: 1.037
+RMSE Rch: 0.008
+MAPE Eb: 1.003
+MAPE Rch: 0.195
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=6
+RMSE Eb: 0.776
+RMSE Rch: 0.007
+MAPE Eb: 0.539
+MAPE Rch: 0.191
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=10
+RMSE Eb: 1.710
+RMSE Rch: 0.011
+MAPE Eb: 0.979
+MAPE Rch: 0.305
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=8
+RMSE Eb: 1.174
+RMSE Rch: 0.009
+MAPE Eb: 0.688
+MAPE Rch: 0.258
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=6
+RMSE Eb: 0.967
+RMSE Rch: 0.008
+MAPE Eb: 0.644
+MAPE Rch: 0.209
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=10
+RMSE Eb: 1.318
+RMSE Rch: 0.011
+MAPE Eb: 0.706
+MAPE Rch: 0.330
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=4
+RMSE Eb: 1.189
+RMSE Rch: 0.008
+MAPE Eb: 1.255
+MAPE Rch: 0.203
+--------------------------------------------------
+Finished VAL for AE n=73
+**************************************************
+Z=8, N=4, emax=6
+RMSE Eb: 1.149
+RMSE Rch: 0.011
+MAPE Eb: 2.139
+MAPE Rch: 0.547
+--------------------------------------------------
+**************************************************
+Z=8, N=4, emax=8
+RMSE Eb: 1.295
+RMSE Rch: 0.015
+MAPE Eb: 2.071
+MAPE Rch: 0.706
+--------------------------------------------------
+**************************************************
+Z=8, N=4, emax=4
+RMSE Eb: 0.906
+RMSE Rch: 0.008
+MAPE Eb: 2.594
+MAPE Rch: 0.351
+--------------------------------------------------
+**************************************************
+Z=8, N=4, emax=10
+RMSE Eb: 1.235
+RMSE Rch: 0.024
+MAPE Eb: 1.869
+MAPE Rch: 1.111
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=4
+RMSE Eb: 0.884
+RMSE Rch: 0.008
+MAPE Eb: 1.699
+MAPE Rch: 0.357
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=8
+RMSE Eb: 1.147
+RMSE Rch: 0.014
+MAPE Eb: 1.460
+MAPE Rch: 0.617
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=6
+RMSE Eb: 1.164
+RMSE Rch: 0.009
+MAPE Eb: 1.623
+MAPE Rch: 0.416
+--------------------------------------------------
+**************************************************
+Z=8, N=5, emax=10
+RMSE Eb: 1.168
+RMSE Rch: 0.030
+MAPE Eb: 1.399
+MAPE Rch: 1.342
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=4
+RMSE Eb: 1.155
+RMSE Rch: 0.009
+MAPE Eb: 1.673
+MAPE Rch: 0.413
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=8
+RMSE Eb: 1.253
+RMSE Rch: 0.015
+MAPE Eb: 1.189
+MAPE Rch: 0.777
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=6
+RMSE Eb: 1.020
+RMSE Rch: 0.010
+MAPE Eb: 1.140
+MAPE Rch: 0.437
+--------------------------------------------------
+**************************************************
+Z=8, N=6, emax=10
+RMSE Eb: 1.482
+RMSE Rch: 0.013
+MAPE Eb: 1.317
+MAPE Rch: 0.640
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=4
+RMSE Eb: 1.108
+RMSE Rch: 0.009
+MAPE Eb: 1.356
+MAPE Rch: 0.450
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=8
+RMSE Eb: 1.504
+RMSE Rch: 0.014
+MAPE Eb: 1.178
+MAPE Rch: 0.702
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=6
+RMSE Eb: 1.074
+RMSE Rch: 0.013
+MAPE Eb: 1.024
+MAPE Rch: 0.717
+--------------------------------------------------
+**************************************************
+Z=8, N=7, emax=10
+RMSE Eb: 1.240
+RMSE Rch: 0.017
+MAPE Eb: 0.917
+MAPE Rch: 0.843
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=4
+RMSE Eb: 0.816
+RMSE Rch: 0.008
+MAPE Eb: 0.840
+MAPE Rch: 0.205
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=6
+RMSE Eb: 0.850
+RMSE Rch: 0.010
+MAPE Eb: 0.690
+MAPE Rch: 0.290
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=8
+RMSE Eb: 0.954
+RMSE Rch: 0.009
+MAPE Eb: 0.725
+MAPE Rch: 0.241
+--------------------------------------------------
+**************************************************
+Z=8, N=8, emax=10
+RMSE Eb: 1.015
+RMSE Rch: 0.011
+MAPE Eb: 0.825
+MAPE Rch: 0.316
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=4
+RMSE Eb: 0.850
+RMSE Rch: 0.007
+MAPE Eb: 0.913
+MAPE Rch: 0.196
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=8
+RMSE Eb: 0.887
+RMSE Rch: 0.010
+MAPE Eb: 0.656
+MAPE Rch: 0.288
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=6
+RMSE Eb: 0.827
+RMSE Rch: 0.008
+MAPE Eb: 0.718
+MAPE Rch: 0.216
+--------------------------------------------------
+**************************************************
+Z=8, N=9, emax=10
+RMSE Eb: 1.225
+RMSE Rch: 0.010
+MAPE Eb: 0.807
+MAPE Rch: 0.340
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=4
+RMSE Eb: 0.813
+RMSE Rch: 0.008
+MAPE Eb: 0.804
+MAPE Rch: 0.223
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=6
+RMSE Eb: 0.718
+RMSE Rch: 0.008
+MAPE Eb: 0.571
+MAPE Rch: 0.209
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=8
+RMSE Eb: 0.816
+RMSE Rch: 0.007
+MAPE Eb: 0.576
+MAPE Rch: 0.219
+--------------------------------------------------
+**************************************************
+Z=8, N=10, emax=10
+RMSE Eb: 1.212
+RMSE Rch: 0.005
+MAPE Eb: 0.909
+MAPE Rch: 0.143
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=8
+RMSE Eb: 1.082
+RMSE Rch: 0.009
+MAPE Eb: 0.748
+MAPE Rch: 0.261
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=4
+RMSE Eb: 0.988
+RMSE Rch: 0.006
+MAPE Eb: 1.098
+MAPE Rch: 0.159
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=6
+RMSE Eb: 0.711
+RMSE Rch: 0.008
+MAPE Eb: 0.540
+MAPE Rch: 0.214
+--------------------------------------------------
+**************************************************
+Z=8, N=11, emax=10
+RMSE Eb: 1.129
+RMSE Rch: 0.008
+MAPE Eb: 0.738
+MAPE Rch: 0.249
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=6
+RMSE Eb: 0.756
+RMSE Rch: 0.006
+MAPE Eb: 0.589
+MAPE Rch: 0.171
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=8
+RMSE Eb: 0.930
+RMSE Rch: 0.008
+MAPE Eb: 0.604
+MAPE Rch: 0.240
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=4
+RMSE Eb: 0.704
+RMSE Rch: 0.007
+MAPE Eb: 0.727
+MAPE Rch: 0.181
+--------------------------------------------------
+**************************************************
+Z=8, N=12, emax=10
+RMSE Eb: 1.406
+RMSE Rch: 0.008
+MAPE Eb: 1.063
+MAPE Rch: 0.240
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=8
+RMSE Eb: 0.789
+RMSE Rch: 0.009
+MAPE Eb: 0.483
+MAPE Rch: 0.254
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=4
+RMSE Eb: 0.882
+RMSE Rch: 0.007
+MAPE Eb: 0.909
+MAPE Rch: 0.176
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=6
+RMSE Eb: 0.842
+RMSE Rch: 0.006
+MAPE Eb: 0.611
+MAPE Rch: 0.170
+--------------------------------------------------
+**************************************************
+Z=8, N=13, emax=10
+RMSE Eb: 1.032
+RMSE Rch: 0.013
+MAPE Eb: 0.701
+MAPE Rch: 0.296
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=6
+RMSE Eb: 0.798
+RMSE Rch: 0.008
+MAPE Eb: 0.539
+MAPE Rch: 0.217
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=10
+RMSE Eb: 1.426
+RMSE Rch: 0.011
+MAPE Eb: 0.943
+MAPE Rch: 0.338
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=4
+RMSE Eb: 0.782
+RMSE Rch: 0.008
+MAPE Eb: 0.784
+MAPE Rch: 0.242
+--------------------------------------------------
+**************************************************
+Z=8, N=14, emax=8
+RMSE Eb: 0.993
+RMSE Rch: 0.012
+MAPE Eb: 0.610
+MAPE Rch: 0.350
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=8
+RMSE Eb: 0.921
+RMSE Rch: 0.008
+MAPE Eb: 0.558
+MAPE Rch: 0.246
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=6
+RMSE Eb: 0.769
+RMSE Rch: 0.006
+MAPE Eb: 0.583
+MAPE Rch: 0.178
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=4
+RMSE Eb: 0.760
+RMSE Rch: 0.005
+MAPE Eb: 0.773
+MAPE Rch: 0.145
+--------------------------------------------------
+**************************************************
+Z=8, N=15, emax=10
+RMSE Eb: 1.338
+RMSE Rch: 0.005
+MAPE Eb: 0.866
+MAPE Rch: 0.141
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=4
+RMSE Eb: 1.198
+RMSE Rch: 0.008
+MAPE Eb: 1.179
+MAPE Rch: 0.207
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=8
+RMSE Eb: 1.158
+RMSE Rch: 0.009
+MAPE Eb: 0.684
+MAPE Rch: 0.247
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=6
+RMSE Eb: 0.915
+RMSE Rch: 0.007
+MAPE Eb: 0.667
+MAPE Rch: 0.191
+--------------------------------------------------
+**************************************************
+Z=8, N=16, emax=10
+RMSE Eb: 1.206
+RMSE Rch: 0.011
+MAPE Eb: 0.637
+MAPE Rch: 0.339
+--------------------------------------------------

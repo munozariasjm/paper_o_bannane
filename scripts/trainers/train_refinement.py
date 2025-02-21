@@ -47,7 +47,9 @@ config.perform_temperature_scaling = True
 
 def train_refinement(frac_out, config, logs_dir: str = ""):
     id = str(frac_out).replace(".", "_")
-    config.data_directory = "/work/submit/josemm/WORKS/Theory/BANANNE/bannane/DATA/all_o"
+    config.data_directory = (
+        "/work/submit/josemm/WORKS/Theory/BANANNE/bannane/DATA/all_o"
+    )
     config.model_save_path = logs_dir + f"/model_{id}.pth"
     config.temperature_save_path = logs_dir + f"/temperature_{id}.pth"
     config.scaler_X_path = logs_dir + f"/scaler_X_{id}.pth"
@@ -60,8 +62,12 @@ def train_refinement(frac_out, config, logs_dir: str = ""):
     loader = MultiIsotopeDataLoader(config)
     full_data = loader.load_all_data()
 
-    full_low_fid = full_data[full_data[config.fidelity_col] < 8].sample(frac=1., random_state=config.seed)
-    full_high_fid = full_data[full_data[config.fidelity_col] == 8].sample(frac=1., random_state=config.seed)
+    full_low_fid = full_data[full_data[config.fidelity_col] < 8].sample(
+        frac=1.0, random_state=config.seed
+    )
+    full_high_fid = full_data[full_data[config.fidelity_col] == 8].sample(
+        frac=1.0, random_state=config.seed
+    )
 
     high_in = full_high_fid.sample(frac=frac_out, random_state=config.seed)
     high_out = full_high_fid.drop(high_in.index)
@@ -76,7 +82,9 @@ def train_refinement(frac_out, config, logs_dir: str = ""):
     train_datasets, scaler_X, scaler_y = preprocess_data_multi_isotope(train_df, config)
 
     # Use the LOO as validation so concatenate
-    val_df = pd.concat([val_df, validation_data.sample(frac=0.1)]).reset_index(drop=True)
+    val_df = pd.concat([val_df, validation_data.sample(frac=0.1)]).reset_index(
+        drop=True
+    )
     val_datasets, _, _ = preprocess_data_multi_isotope(val_df, config)
 
     # 6) Fidelity levels
@@ -97,10 +105,11 @@ def train_refinement(frac_out, config, logs_dir: str = ""):
     best_model.eval()
     trainer.model = best_model
 
-
     # %%
     # Plot the training history with rolling window average
-    plot_training_losses_history(histories, logs_dir + f"/training_history_all_{id}.png")
+    plot_training_losses_history(
+        histories, logs_dir + f"/training_history_all_{id}.png"
+    )
     plot_mape_history(histories, logs_dir + f"/training_mapes_all_{id}.png")
     ###### For the extrapolation data ######
 
@@ -151,8 +160,11 @@ def train_refinement(frac_out, config, logs_dir: str = ""):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--fraction", type=int, default=10)
-    parser.add_argument("--logs_dir", type=str,
-                        default="/work/submit/josemm/WORKS/Theory/BANANNE/LABS/TRAIN_ALL")
+    parser.add_argument(
+        "--logs_dir",
+        type=str,
+        default="/work/submit/josemm/WORKS/Theory/BANANNE/LABS/TRAIN_ALL",
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--n_embedding_dim", type=int, default=20)
     parser.add_argument("--embed_z", action="store_true")
@@ -163,7 +175,7 @@ if __name__ == "__main__":
     parser.add_argument("--dropout", type=float, default=0.05)
     parser.add_argument("--learning_rate", type=float, default=1e-4)
     parser.add_argument("--num_iterations", type=int, default=30_000)
-    parser.add_argument("--test_size", type=float, default=0.0001)
+    parser.add_argument("--test_size", type=float, default=0.2)
     parser.add_argument("--val_size", type=float, default=0.2)
     parser.add_argument("--perform_temperature_scaling", action="store_true")
 

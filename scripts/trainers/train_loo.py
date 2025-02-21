@@ -43,7 +43,9 @@ config = Config()
 
 
 def train_loo(n_out: int, config: Config = config, logs_dir: str = ""):
-    config.data_directory = "/work/submit/josemm/WORKS/Theory/BANANNE/bannane/DATA/all_o"
+    config.data_directory = (
+        "/work/submit/josemm/WORKS/Theory/BANANNE/bannane/DATA/all_o"
+    )
     config.model_save_path = logs_dir + f"/model_{n_out}.pth"
     config.temperature_save_path = logs_dir + f"/temperature_{n_out}.pth"
     config.scaler_X_path = logs_dir + f"/scaler_X_{n_out}.pth"
@@ -71,7 +73,9 @@ def train_loo(n_out: int, config: Config = config, logs_dir: str = ""):
     train_datasets, scaler_X, scaler_y = preprocess_data_multi_isotope(train_df, config)
 
     # Use the LOO as validation so concatenate
-    val_df = pd.concat([val_df, extrapolation_data.sample(frac=0.3)]).reset_index(drop=True)
+    val_df = pd.concat([val_df, extrapolation_data.sample(frac=0.3)]).reset_index(
+        drop=True
+    )
     val_datasets, _, _ = preprocess_data_multi_isotope(val_df, config)
 
     # 6) Fidelity levels
@@ -92,10 +96,11 @@ def train_loo(n_out: int, config: Config = config, logs_dir: str = ""):
     best_model.eval()
     trainer.model = best_model
 
-
     # %%
     # Plot the training history with rolling window average
-    plot_training_losses_history(histories, logs_dir + f"/training_history_loo_{n_out}.png")
+    plot_training_losses_history(
+        histories, logs_dir + f"/training_history_loo_{n_out}.png"
+    )
     plot_mape_history(histories, logs_dir + f"/training_mapes_loo_{n_out}.png")
 
     ###### For the extrapolation data ######
@@ -144,8 +149,11 @@ def train_loo(n_out: int, config: Config = config, logs_dir: str = ""):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--n_out", type=int, default=8)
-    parser.add_argument("--logs_dir", type=str,
-                        default="/work/submit/josemm/WORKS/Theory/BANANNE/LABS/LOO")
+    parser.add_argument(
+        "--logs_dir",
+        type=str,
+        default="/work/submit/josemm/WORKS/Theory/BANANNE/LABS/LOO",
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--n_embedding_dim", type=int, default=20)
     parser.add_argument("--embed_z", action="store_true")
@@ -156,7 +164,7 @@ if __name__ == "__main__":
     parser.add_argument("--dropout", type=float, default=0.05)
     parser.add_argument("--learning_rate", type=float, default=1e-4)
     parser.add_argument("--num_iterations", type=int, default=30_000)
-    parser.add_argument("--test_size", type=float, default=0.0001)
+    parser.add_argument("--test_size", type=float, default=0.2)
     parser.add_argument("--val_size", type=float, default=0.2)
     parser.add_argument("--perform_temperature_scaling", action="store_true")
 
