@@ -3,6 +3,8 @@
 
 Despite recent advancements in many-body methods and nucleon-nucleon interactions derived from chiral effective field theory, performing accurate nuclear many-body calculations with quantifiable uncertainties remains a significant challenge for medium and heavy nuclei. To address this, we introduce a hierarchical framework that combines ab initio many-body calculations with a Bayesian neural network, developing emulators capable of accurately predicting nuclear properties across the nuclear chart. This approach enables the rapid evaluation of nuclear properties across multiple isotopes simultaneously. We benchmark our developments using the oxygen isotopic chain, achieving precise results for ground-state energies and nuclear charge radii, while providing robust uncertainty quantification. Our method demonstrates robust extrapolation and interpolation capabilities to nuclei outside of the training data, making it highly effective for transfer learning and enabling predictions in extreme regions of the nuclear chart. The emulator's flexible architecture lays the foundation for enabling global uncertainty quantification across the nuclear landscape, as well as guiding searches at rare isotope beam facilities towards isotopes that will reveal the most about the underlying nuclear forces.
 
+See the full paper [here](https://arxiv.org/abs/2502.20363).
+
 
 This repository contains the code and data for reproducing the results in the paper 'Global Framework for Simultaneous Emulation Across the Nuclear Landscape'.
 
@@ -67,13 +69,15 @@ This code is released under the MIT License.
 
 Please cite:
 ```bibtex
-@article{belley2025bannane,
-  author = {Antoine Belley and Jose M. Munoz and Ronald F. Garcia Ruiz},
-  title = {Global Framework for Simultaneous Emulation Across the Nuclear Landscape},
-  journal = {In Review},
-  year = {2025},
+@misc{belley2025globalframeworksimultaneousemulation,
+      title={Global Framework for Simultaneous Emulation Across the Nuclear Landscape},
+      author={Antoine Belley and Jose M. Munoz and Ronald F. Garcia Ruiz},
+      year={2025},
+      eprint={2502.20363},
+      archivePrefix={arXiv},
+      primaryClass={nucl-th},
+      url={https://arxiv.org/abs/2502.20363},
 }
-
 
 ```
 
